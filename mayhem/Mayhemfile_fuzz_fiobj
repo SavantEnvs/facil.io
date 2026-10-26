@@ -1,0 +1,9 @@
+project: savantenvs/facil.io
+target: fuzz_fiobj
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_fiobj/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fiobj
+    libfuzzer: true
+    timeout: 30
